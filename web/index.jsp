@@ -24,29 +24,29 @@
         
         <div class="jumbotron" id="new-surveys">
             
-            <h3>New Surveys</h3>
+            <h3>New &nbsp;Surveys</h3>
             
             <div class="card">
-                <img src="images/survey1.jpg" alt="Avatar" style="width:100%">
+                <img src="images/survey1.jpg" alt="water pollution and treatment" style="width:100%">
                 <div>
-                  <p>Architect & Engineer</p> 
-                  <button class="btn btn-primary">Start Survey</button>
+                  <p>Water Pollution & Treatment</p> 
+                  <button class="btn btn-primary"><a href="">Start Survey</a></button>
                 </div>
             </div>
             
             <div class="card">
-                <img src="images/survey2.jpg" alt="Avatar" style="width:100%">
+                <img src="images/survey2.jpg" alt="land degradation" style="width:100%">
                 <div>
-                  <p>Architect & Engineer</p> 
-                  <button class="btn btn-primary">Start Survey</button>
+                  <p>Land Degradation</p> 
+                  <button class="btn btn-primary"><a href="">Start Survey</a></button>
                 </div>
             </div>
             
             <div class="card">
-                <img src="images/survey3.jpg" alt="Avatar" style="width:100%">
+                <img src="images/survey3.jpg" alt="environment remedation" style="width:100%">
                 <div>
-                  <p>Architect & Engineer</p> 
-                  <button class="btn btn-primary">Start Survey</button>
+                  <p>Environmental Remediation</p> 
+                  <button class="btn btn-primary"><a href="">Start Survey</a></button>
                 </div>
             </div>
         </div>
@@ -54,6 +54,8 @@
         <div class="row">
             
             <div class="col-md-7">
+                
+                <h3 class="comp-heading">Available &nbsp;Competitions</h3>
                 <div class="brief-competition">
                     <div class="jumbotron">
                         <img src="#" alt=""/>
@@ -79,26 +81,28 @@
             </div>
             
             <div class="col-md-5">
-                <div class="brief-competition">
-                    <div class="jumbotron">
-                        <img src="#" alt=""/>
-                        
+                
+                <h3 class="comp-heading">Completed Surveys and Competitions</h3>
+                <div class="surveys-done">
+                    <div class="jumbotron survey-desc">
+                        <img src="#" alt="survey 1 done"/>
+                        <h4>Completed Survey 1 brief description</h4>
                     </div>
-                    <div class="jumbotron">
-                        <img src="#" alt=""/>
-                        
+                    <div class="jumbotron survey-desc">
+                        <img src="#" alt="survey 1 done"/>
+                        <h4>Completed Survey 2 brief description</h4>
                     </div>
-                    <div class="jumbotron">
-                        <img src="#" alt=""/>
-                        
+                    <div class="jumbotron survey-desc">
+                        <img src="#" alt="survey 1 done"/>
+                        <h4>Completed Survey 3 brief description</h4>
                     </div>
-                    <div class="jumbotron">
-                        <img src="#" alt=""/>
-                        
+                    <div class="jumbotron survey-desc">
+                        <img src="#" alt="survey 1 done"/>
+                        <h4>Completed Survey 4 brief description</h4>
                     </div>
-                    <div class="jumbotron">
-                        <img src="#" alt=""/>
-                        
+                    <div class="jumbotron survey-desc">
+                        <img src="#" alt="survey 1 done"/>
+                        <h4>Completed Survey 5 brief description</h4>
                     </div>
                 </div>
             </div>
