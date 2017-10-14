@@ -4,7 +4,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Admin - GreenSpace Environment</title>
+        <title>Admin - Environmental Survey</title>
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/bootstrap.css">
         <link rel="icon" href="images/logo.ico" type="image/ico">

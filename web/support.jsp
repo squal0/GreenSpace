@@ -3,7 +3,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Support - GreenSpace Environment</title>
+        <title>Support -  Environmental Survey</title>
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/bootstrap.css">
         <link rel="icon" href="images/logo.ico" type="image/ico">
@@ -24,13 +24,13 @@
                     <h4>Support Form</h4>
                     <form method="post" action="support" onsubmit="return validate()">
 
-                        <label><span>Username</span></label>
-                        <input type="text" class="form-control" placeholder="Enter Username" name="username" required>
+                        <label><span>Username</span><span class="required">*</span></label>
+                        <input type="text" class="form-control" placeholder="Enter Username (Required)" name="username" required>
                         
-                        <label><span>Email Address</span></label>
-                        <input type="email" class="form-control" placeholder="Enter Email Address" name="email" required>
+                        <label><span>Email Address</span><span class="required">*</span></label>
+                        <input type="email" class="form-control" placeholder="Enter Email Address (Required)" name="email" required>
                         
-                        <label for="subject">Subject</label>
+                        <label for="subject">Subject<span class="required">*</span></label>
                         <select class="form-control" id="subject">
                           <option>Surveys</option>
                           <option>Competitions</option>
@@ -38,11 +38,11 @@
                           <option>Other</option>
                         </select>
                         
-                        <label for="comment">Message</label>
+                        <label for="comment">Message<span class="required">*</span></label>
                         <textarea class="form-control" rows="5" id="comment" placeholder="Enter message...."></textarea>
 
                         <button type="submit" class="btn btn-primary btn-lg btn-block">Submit</button>
-                        
+                        <h5>Fields marked as <span class="required">*</span> are required.</h5>
                     </form>
                 </div>
                 

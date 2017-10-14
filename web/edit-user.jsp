@@ -9,7 +9,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Edit User - GreenSpace Environment</title>
+        <title>Edit User - Environmental Survey</title>
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/bootstrap.css">
         <link rel="icon" href="images/logo.ico" type="image/ico">

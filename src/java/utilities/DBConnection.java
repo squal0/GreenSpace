@@ -18,9 +18,9 @@ public class DBConnection {
     public static Connection createConnection()
     {
         Connection con = null;
-        String url = "jdbc:mysql://localhost:3306/greenspacedb"; //MySQL URL and followed by the database name
+        String url = "jdbc:mysql://localhost:3306/environmentsurvey"; //MySQL URL and followed by the database name
         String username = "root"; //MySQL username
-        String password = "Password254"; //MySQL password
+        String password = "12345"; //MySQL password
         try 
         {
         try 

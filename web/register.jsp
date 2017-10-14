@@ -4,7 +4,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Register - GreenSpace Environment</title>
+        <title>Register - Environmental Survey</title>
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/bootstrap.css">
         <link rel="icon" href="images/logo.ico" type="image/ico">
@@ -85,33 +85,34 @@
                     <span ><%=(request.getAttribute("errMessage") == null) ? "": request.getAttribute("errMessage")%></span>
                 </ul>
             </div>
-
-                <form method="post" action="RegisterServlet" name="register-form" onsubmit="return validate()">
-                               
-                <label><span>Name</span></label>
+                <h4 class="h4reg">User Registration</h4>  
+                <form method="post" action="RegisterServlet" name="register-form" onsubmit="return validate()" >
+                             
+                    <label><span>Name</span><span class="required">*</span></label>
                 <input type="text" class="form-control" placeholder="Enter Your Full Names" name="name" required>
                 
-                <label><span>Username</span></label>
+                <label><span>Username</span><span class="required">*</span></label>
                 <input type="text" class="form-control" placeholder="Enter Username" name="username" required>
                 
-                <label><span>Roll No / Employee No</span></label>
+                <label><span>Roll No / Employee No</span><span class="required">*</span></label>
                 <input type="text" class="form-control" placeholder="Enter your Enrollment No or Employee No " name="rollno" required>
                 
-                <label><span>Admission Date / Date of  Joining</span></label>
+                <label><span>Admission Date / Date of  Joining Institution</span><span class="required">*</span></label>
                 <input type = "text" class="form-control" id = "datepicker-13" placeholder="Enter Admission Date or Date of Joining" name="date" required>
                 
-                <label><span>Class</span></label>
+                <label><span>Class</span><span class="required">*</span></label>
                 <input type="text" class="form-control" placeholder="Enter Class" name="classSpec" required>
                 
-                <label><span>Specification</span></label>
+                <label><span>Specification</span><span class="required">*</span></label>
                 <input type="text" class="form-control" placeholder="Enter Specification" name="specification" required>
 
-                <label><span>Password</span></label>
+                <label><span>Password</span><span class="required">*</span></label>
                 <input type="password" class="form-control" placeholder="Enter Password" name="password" required>
                 
-                <label><span>Confirm Password</span></label>
+                <label><span>Confirm Password</span><span class="required">*</span></label>
                 <input type="password" class="form-control" placeholder="Confirm Password" name="confpassword" required>
-                
+                <h5>Fields marked as <span class="required">*</span> are required.</h5>
+                   
                 <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
                 <button type="submit" class="btn btn-primary btn-lg btn-block">Register</button>
                 

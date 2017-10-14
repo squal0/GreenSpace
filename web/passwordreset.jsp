@@ -1,10 +1,9 @@
-
-<%@page contentType="text/html" pageEncoding="UTF-8" language="java"%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Login - Environmental Survey</title>
+        <title>Reset Password - Environmental Survey</title>
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/bootstrap.css">
         <link rel="icon" href="images/logo.ico" type="image/ico">
@@ -16,26 +15,29 @@
     <body>
         <%@include file='/partials/header.jsp'%>
         
-        <div class="container" id="login-form">
+        <div class="container" id="resetpass-form">
             <div class="errors">
                 <span ><%=(request.getAttribute("errMessage") == null) ? "": request.getAttribute("errMessage")%></span>
         
             </div>
             
-                <form method="post" id="login" action="<%=request.getContextPath()%>/LoginServlet">
+                <form method="post" id="reset" action="<%=request.getContextPath()%>/ResetPassServlet">
 
+                 
                 <label><span>Username</span></label>
                 <input type="text" class="form-control" placeholder="Enter Username" name="username" required>
-
+                
                 <label><span>Password</span></label>
                 <input type="password" class="form-control" placeholder="Enter Password" name="password" required>
 
-                <input type="checkbox" checked="checked"> Remember me
-                <button type="submit" class="btn btn-primary btn-lg btn-block">Login</button>
-                <span class="psw"><a href="passwordreset.jsp">Forgot password?</a></span>
+                <label><span>Confirm Password</span></label>
+                <input type="password" class="form-control" placeholder="Confirm Password" name="confpassword" required>
+
+                <button type="submit" class="btn btn-primary btn-lg btn-block">Reset Password</button>
+                
             </form>
         </div>
-        
+         
         <%@include file='/partials/footer.html'%>
     </body>
 </html>
