@@ -32,10 +32,14 @@
         <div class="col-md-3">
             
             <div class="input-group" id="subscribe">
-                <input type="email" name="email" id="email" value="" class="form-control subscribe" placeholder="Enter your email here" required />
-      			<span class="input-group-btn">
-        			<button name="button" type="submit" class="btn btn-default" id="btn-subscribe">Subscribe</button>
-</span>    </div>
+                <form method="post" action="SubscribeServlet" >
+                <input type="email" id="email" name="email" class="form-control subscribe" placeholder="Enter your email here" required />
+      		<span class="input-group-btn">
+                    <button name="button" type="submit" class="btn btn-default" id="btn-subscribe">Subscribe</button>
+                </span>
+                
+                </form>
+            </div>
             
         </div>
         

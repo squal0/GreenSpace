@@ -27,21 +27,27 @@ public class LoginDao {
         ResultSet resultSet = null;
         String userNameDB = "";
         String passwordDB = "";
+        String roleDB = "";
     try
-    {
-        con = DBConnection.createConnection(); //establishing connection
-        statement = con.createStatement(); //Statement is used to write queries. Read more about it.
-        resultSet = statement.executeQuery("select username,passwordHash from users"); //Here table name is users and userName,password are columns. fetching all the records and storing in a resultSet.
-        while(resultSet.next()) // Until next row is present otherwise it return false
         {
-            userNameDB = resultSet.getString("username"); //fetch the values present in database
+        con = DBConnection.createConnection();
+        statement = con.createStatement();
+        resultSet = statement.executeQuery("select username,passwordHash,role from users");
+        while(resultSet.next())
+        {
+            userNameDB = resultSet.getString("username");
             passwordDB = resultSet.getString("passwordHash");
-            if(username.equals(userNameDB) && password.equals(passwordDB))
-            {
-                return "User Logged In Successfully"; ////If the user entered values are already present in database, which means user has already registered so I will return SUCCESS message.
-            }
+            roleDB = resultSet.getString("role");
+        if(username.equals(userNameDB) && password.equals(passwordDB) && roleDB.equals("Admin"))
+            return "Admin_Role";
+        else if(username.equals(userNameDB) && password.equals(passwordDB) && roleDB.equals("Student"))
+            return "User_Role";
+        else if(username.equals(userNameDB) && password.equals(passwordDB) && roleDB.equals("Faculty"))
+            return "User_Role";
+        else if(username.equals(userNameDB) && password.equals(passwordDB) && roleDB.equals("Staff"))
+            return "User_Role";
         }
-    }
+        }
     catch(SQLException e)
     {
         e.printStackTrace();

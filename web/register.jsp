@@ -21,6 +21,10 @@
             $( "#datepicker-13" ).datepicker();
          });
          
+         $(document).ready( function() {
+            $('.errors').delay(3000).fadeOut();
+         });
+         
          function validate(){
                 
                 var name = document.forms["register-form"]["name"].value;
@@ -94,6 +98,14 @@
                 <label><span>Username</span><span class="required">*</span></label>
                 <input type="text" class="form-control" placeholder="Enter Username" name="username" required>
                 
+                <label for="subject">User Role<span class="required">*</span></label>
+                        <select class="form-control" id="subject" name="role">
+                          <option>Student</option>
+                          <option>Faculty</option>
+                          <option>Staff</option>
+                          
+                        </select>
+                
                 <label><span>Roll No / Employee No</span><span class="required">*</span></label>
                 <input type="text" class="form-control" placeholder="Enter your Enrollment No or Employee No " name="rollno" required>
                 
@@ -119,6 +131,6 @@
             </form>
         </div>
                  
-        <%@include file='/partials/footer.html'%>
+        <%@include file='/partials/footer.jsp'%>
     </body>
 </html>

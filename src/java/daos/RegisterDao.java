@@ -20,6 +20,7 @@ public class RegisterDao {
         
         String name = registerBean.getName();
         String username = registerBean.getUsername();
+        String role = registerBean.getRole();
         String rollno = registerBean.getRollno();
         String date = registerBean.getDate();
         String classSpec = registerBean.getClass_spec();
@@ -30,15 +31,16 @@ public class RegisterDao {
         try
         {
         con = DBConnection.createConnection();
-        String query = "insert into users(name, username, rollno, dateOfJoin, classSpec, specification ,passwordHash) values (?,?,?,?,?,?,?)"; //Insert user details into the table 'USERS'
+        String query = "insert into users(name, username,role, rollno, dateOfJoin, classSpec, specification ,passwordHash) values (?,?,?,?,?,?,?,?)"; //Insert user details into the table 'USERS'
         preparedStatement = con.prepareStatement(query); //Making use of prepared statements here to insert bunch of data
         preparedStatement.setString(1, name);
         preparedStatement.setString(2, username);
-        preparedStatement.setString(3, rollno);
-        preparedStatement.setString(4, date);
-        preparedStatement.setString(5, classSpec);
-        preparedStatement.setString(6, specification);
-        preparedStatement.setString(7, password);
+        preparedStatement.setString(3, role);
+        preparedStatement.setString(4, rollno);
+        preparedStatement.setString(5, date);
+        preparedStatement.setString(6, classSpec);
+        preparedStatement.setString(7, specification);
+        preparedStatement.setString(8, password);
         int i= preparedStatement.executeUpdate();
         if (i!=0)  //ensure data has been inserted into the database
             

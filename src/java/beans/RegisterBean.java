@@ -13,6 +13,7 @@ public class RegisterBean {
     
     private String name;
     private String username;
+    private String role;
     private String rollno;
     private String date;
     private String classSpec;
@@ -74,6 +75,14 @@ public class RegisterBean {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
     }
     
     

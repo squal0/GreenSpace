@@ -21,15 +21,17 @@ public class AdminDao {
         
         String username = adminBean.getUsername();
         String password = adminBean.getPassword();
+        String role = adminBean.getRole();
         Connection con = null;
         PreparedStatement preparedStatement = null;
         try
         {
         con = DBConnection.createConnection();
-        String query = "insert into admin(username,passwordHash) values (?,?)"; //Insert user details into the table 'users'
+        String query = "insert into users(username,role, passwordHash) values (?,?,?)"; //Insert user details into the table 'users'
         preparedStatement = con.prepareStatement(query); //Making use of prepared statements here to insert bunch of data
         preparedStatement.setString(1, username);
-        preparedStatement.setString(2, password);
+        preparedStatement.setString(2, role);
+        preparedStatement.setString(3, password);
         int i= preparedStatement.executeUpdate();
         if (i!=0)  //ensure data has been inserted into the database
             

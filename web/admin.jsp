@@ -14,6 +14,11 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <script>
         
+        
+            $(document).ready( function() {
+                $('.errors').delay(3000).fadeOut();
+            });
+            
             function validate(){
                 
                 var username = document.forms["admin-form"]["username"].value; 
@@ -47,23 +52,26 @@
                     <span ><%=(request.getAttribute("errMessage") == null) ? "": request.getAttribute("errMessage")%></span>
                 </ul>
             </div>
-
+                
+                <h4 class="h4reg">Admin Registration</h4> 
                 <form method="post" name="admin-form" action="AdminServlet" onsubmit="return validate()">
                 
-                <label><span>Username</span></label>
+                <label><span>Username</span><span class="required">*</span></label>
                 <input type="text" class="form-control" placeholder="Enter Username" name="username" required>
 
-                <label><span>Password</span></label>
+                <label><span>Password</span><span class="required">*</span></label>
                 <input type="password" class="form-control" placeholder="Enter Password" name="password" required>
                 
                 <label><span>Confirm Password</span></label>
                 <input type="password" class="form-control" placeholder="Enter Password" name="confpassword" required>
 
-                <button type="submit" class="btn btn-primary btn-lg btn-block">Login</button>
-                <span class="psw"><a href="passwordreset.jsp">Forgot password?</a></span>
-            </form>
+                
+                <h5>Fields marked as <span class="required">*</span> are required.</h5>
+                <button type="submit" class="btn btn-primary btn-lg btn-block">Register</button>
+                
+                </form>
         </div>
                 
-        <%@include file='/partials/footer.html'%>
+        <%@include file='/partials/footer.jsp'%>
     </body>
 </html>

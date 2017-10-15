@@ -11,7 +11,7 @@
             </div>
             
             <%
-                String username = (String) session.getAttribute("user");                     
+                String username = (String) session.getAttribute("user");
                 if (username == null) {
             %>
             <div class="col-md-3 col-sm-6" id="buttons">

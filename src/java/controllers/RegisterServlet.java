@@ -27,6 +27,7 @@ public class RegisterServlet extends HttpServlet {
         // input parameters into local variables
         String name = request.getParameter("name");
         String username = request.getParameter("username");
+        String role = request.getParameter("role");
         String rollno = request.getParameter("rollno");
         String date = request.getParameter("date");
         String class_spec = request.getParameter("classSpec");
@@ -38,6 +39,7 @@ public class RegisterServlet extends HttpServlet {
         //using the admin java bean
         registerBean.setName(name);
         registerBean.setUsername(username);
+        registerBean.setRole(role);
         registerBean.setRollno(rollno);
         registerBean.setDate(date);
         registerBean.setClass_spec(class_spec);

@@ -127,6 +127,6 @@
             </div>
         </div>
         
-        <%@include file='/partials/footer.html'%>
+        <%@include file='/partials/footer.jsp'%>
     </body>
 </html>

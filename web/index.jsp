@@ -14,6 +14,13 @@
         </script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         
+        <script>
+            
+            $(document).ready( function() {
+                $('.errors').delay(3000).fadeOut();
+            });
+        </script>
+        
     </head>
     <body>
         <%@include file='partials/header.jsp'%>
@@ -107,6 +114,6 @@
                 </div>
             </div>
         </div>
-        <%@include file='/partials/footer.html'%>
+        <%@include file='/partials/footer.jsp'%>
     </body>
 </html>

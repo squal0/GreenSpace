@@ -30,12 +30,14 @@ public class AdminServlet extends HttpServlet{
         // input parameters into local variables
         String username = request.getParameter("username");
         String password = request.getParameter("password");
+        String role = "Admin";
         
         AdminBean adminBean = new AdminBean();
         
         //using the admin java bean
         adminBean.setUsername(username);
         adminBean.setPassword(password);
+        adminBean.setRole(role);
         
         AdminDao adminDao = new AdminDao();
         //Logic of the Registration application is present here. We are going to insert user data in to the database.
@@ -43,7 +45,7 @@ public class AdminServlet extends HttpServlet{
         if(userRegistered.equals("Admin Registered Successfully."))   //On success, you can display a message to user on Home page
         {
             request.setAttribute("errMessage", "Admin Registered Successfully");
-            request.getRequestDispatcher("/admin-section.jsp").forward(request, response);
+            request.getRequestDispatcher("/login.jsp").forward(request, response);
         }
         else   //On Failure, display a meaningful message to the User.
         {

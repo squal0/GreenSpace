@@ -18,9 +18,9 @@ public class DBConnection {
     public static Connection createConnection()
     {
         Connection con = null;
-        String url = "jdbc:mysql://localhost:3306/environmentsurvey"; //MySQL URL and followed by the database name
-        String username = "root"; //MySQL username
-        String password = "12345"; //MySQL password
+        String url = "jdbc:mysql://localhost:3306/environmentsurveydb"; //MySQL URL and followed by the database name
+        String username = "surveys"; //MySQL username
+        String password = "Grass254!"; //MySQL password
         try 
         {
         try 
